@@ -27,15 +27,16 @@ public class Input {
         return Double.parseDouble(s);
     }
 
-    public String get_operation() throws ValueException {
+    public String get_operation() {
         String[] answers = { "+", "-", "*", "/" };
 
-        String s = this.get_string("Quale operazione? [+;-;*;/]\n> ");
+        String s = this.get_string(
+                "What operation do you want?(write the the symbol of the operation)\nAdd(+)\nSubtract(-)\nMultiplicate(*)\nDivide(/)");
 
         for (String answer : answers) {
             if (s.equals(answer))
                 return answer;
         }
-        throw new ValueException("Not a valid operation!");
+        throw new UnsupportedOperationException("Not a valid operation!");
     }
 }
