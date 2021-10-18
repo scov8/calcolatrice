@@ -1,46 +1,5 @@
-Un esempio di DoD è il seguente:
-
-Scrivere Unit Test
-Code review
-Codice presente su VCS
-Eseguire il deploy sull’ambiente di stage
-Eseguire test di accettazione
-
-Esempio di Definition of Done (DoD)
- Test superato (corredato dalle specifiche)
- ***Codice rivisto
- Criteri di accettazione soddisfatti (segue dettaglio)
- Test Funzionale superato
- Requisiti non-funzionali soddisfatti (segue dettaglio)
- Test di regressione OK
-**** Accettazione del Product Owner
-
-Esempio
-**** Il codice è peer-reviewed.
-----Il codice è stato rilasciato.
-Il codice è stato portato in ambiente di test.
-La posizione ha superato il test di regressione e la test di integrazione.
-De codice sorgente è documentato.
-Documentazione utente è stato aggiornato.
-Tutte le parti interessate hanno concordato.
-
-Dalla Slide:
-È una questione di compromesso 
-L'implementazione della storia utente soddisfa TUTTI i criteri di accettazione
-La user story è distribuita nell'ambiente di produzione ma disattivata (toggle off)
-I test unitari sono stati scritti, eseguiti e superati
-Ogni criterio di accettazione ha almeno un caso di test associato
-La documentazione tecnica è caricata dal team su Confluence
-La performance è sotto X
-La storia utente è stata sottoposta a peer-review
-**** I test di integrazione sono stati eseguiti e compilati
-Le configurazioni manuali che devono essere eseguite dopo il deployment in produzione sono segnate nella user story
-Il deployment nell'ambiente di produzione della storia ha note di rilascio
-La documentazione per l'utente finale è disponibile
-
-
-
-**** Accettazione del Product Owner.
-**** Il codice è peer-reviewed.
-**** I test sono stati eseguiti e superati.
-**** La documentazione è stata prodotta.
+Definition of Done (DoD):
+- Acceptance by Product Owner.
+- The code has been peer-reviewed.
+- All tests are executed and passed.
+- The software's documentation has been written.

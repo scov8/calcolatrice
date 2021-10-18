@@ -29,7 +29,3 @@ So that I can know the result
 As a user
 I want to save the last result
 So that I can use it in the next operation
-
-WHO
-WHAT
-WHY

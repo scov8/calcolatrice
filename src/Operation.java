@@ -1,14 +1,17 @@
 import java.lang.Math;
 
+/**
+ * This class contains all the methods used to carry out the operations
+ */
 public class Operation {
     /**
-     * This function is the constructor of class
+     * This is the constructor of the class.
      */
     public Operation() {
     }
 
     /**
-     * This function calculate the sum between two real numbers
+     * This function calculates the sum between two real numbers
      * 
      * @param firstNumber  first operand of operation
      * @param secondNumber second operand of operation
@@ -19,7 +22,7 @@ public class Operation {
     }
 
     /**
-     * This function calculate the substract between two real numbers
+     * This function calculates the substraction between two real numbers
      * 
      * @param firstNumber  first operand of operation
      * @param secondNumber second operand of operation
@@ -30,7 +33,7 @@ public class Operation {
     }
 
     /**
-     * This function calculate the moltiplicate between two real numbers
+     * This function calculates the multiplication between two real numbers
      * 
      * @param firstNumber  first operand of operation
      * @param secondNumber second operand of operation
@@ -41,7 +44,7 @@ public class Operation {
     }
 
     /**
-     * This function calculate the division between two real numbers
+     * This function calculates the division between two real numbers
      * 
      * @param firstNumber  first operand of operation
      * @param secondNumber second operand of operation
@@ -52,38 +55,38 @@ public class Operation {
     }
 
     /**
-     * This function calculate the sine of a real numbers
+     * This function calculates the sine of a real number
      * 
-     * @param firstNumber first operand of operation
+     * @param angle the angle
      * @return the result of operation
      */
-    public double sine(int mod, double firstNumber) {
-        if (mod == 1) /* 1 = gradi */
-            firstNumber = Math.toRadians(firstNumber);
-        return Math.sin(firstNumber);
+    public double sine(int mod, double angle) {
+        if (mod == 1) /* 1 = degrees */
+            angle = Math.toRadians(angle);
+        return Math.sin(angle);
     }
 
     /**
-     * This function calculate the cosine of a real numbers
+     * This function calculates the cosine of a real number
      * 
-     * @param firstNumber first operand of operation
+     * @param angle the angle
      * @return the result of operation
      */
-    public double cosine(int mod, double firstNumber) {
-        if (mod == 1) /* 1 = gradi */
-            firstNumber = Math.toRadians(firstNumber);
-        return Math.cos(firstNumber);
+    public double cosine(int mod, double angle) {
+        if (mod == 1) /* 1 = degrees */
+            angle = Math.toRadians(angle);
+        return Math.cos(angle);
     }
 
     /**
-     * This function calculate the tangent of a real numbers
+     * This function calculates the tangent of a real number
      * 
-     * @param firstNumber first operand of operation
+     * @param angle the angle
      * @return the result of operation
      */
-    public double tangent(int mod, double firstNumber) {
-        if (mod == 1) /* 1 = gradi */
-            firstNumber = Math.toRadians(firstNumber);
-        return Math.tan(firstNumber);
+    public double tangent(int mod, double angle) {
+        if (mod == 1) /* 1 = degrees */
+            angle = Math.toRadians(angle);
+        return Math.tan(angle);
     }
 }
