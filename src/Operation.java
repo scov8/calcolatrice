@@ -1,3 +1,5 @@
+import java.lang.Math;
+
 public class Operation {
     /**
      * This function is the constructor of class
@@ -47,5 +49,41 @@ public class Operation {
      */
     public double division(double firstNumber, double secondNumber) {
         return firstNumber / secondNumber;
+    }
+
+    /**
+     * This function calculate the sine of a real numbers
+     * 
+     * @param firstNumber first operand of operation
+     * @return the result of operation
+     */
+    public double sine(double firstNumber, int mod) {
+        if (mod == 1) /* 1 = gradi */
+            firstNumber = Math.toRadians(firstNumber);
+        return Math.sin(firstNumber);
+    }
+
+    /**
+     * This function calculate the cosine of a real numbers
+     * 
+     * @param firstNumber first operand of operation
+     * @return the result of operation
+     */
+    public double cosine(double firstNumber, int mod) {
+        if (mod == 1) /* 1 = gradi */
+            firstNumber = Math.toRadians(firstNumber);
+        return Math.cos(firstNumber);
+    }
+
+    /**
+     * This function calculate the tangent of a real numbers
+     * 
+     * @param firstNumber first operand of operation
+     * @return the result of operation
+     */
+    public double tangent(double firstNumber, int mod) {
+        if (mod == 1) /* 1 = gradi */
+            firstNumber = Math.toRadians(firstNumber);
+        return Math.tan(firstNumber);
     }
 }

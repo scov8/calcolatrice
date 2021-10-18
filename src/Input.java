@@ -15,28 +15,53 @@ public class Input {
             System.out.print(prompt);
             input_string = this.reader.readLine().trim();
         } catch (IOException e) {
-            System.out.println("Errore input: " + e);
+            System.out.println("Input error: " + e);
         }
+
+        if (input_string.equalsIgnoreCase("quit"))
+            System.exit(0);
+
         return input_string;
     }
 
-    public double get_number() {
-        String s = this.get_string("Dammi un numero\n> ");
-        if (s.contains("[^\\d]"))
-            System.out.println("Non è un numero");
+    public double get_number(double prev_result) {
+        String s = this.get_string("Write a real number (or ANS to use previous result)\n> ");
+        if (s.equalsIgnoreCase("ANS"))
+            return prev_result;
+
+        /* Replace , with . */
+        s = s.replace(",", ".");
+
+        /* Check that the input only contains numeric input */
+        if (s.contains("[0-9\\.]"))
+            throw new IllegalArgumentException("It isn't a number");
+
         return Double.parseDouble(s);
     }
 
     public String get_operation() {
-        String[] answers = { "+", "-", "*", "/" };
+        String[] answers = { "+", "-", "*", "/", "cos", "sin", "tan" };
 
         String s = this.get_string(
-                "What operation do you want?(write the the symbol of the operation)\nAdd(+)\nSubtract(-)\nMultiplicate(*)\nDivide(/)");
+                "What operation do you want? [Addition(+), Subtraction(-), Multiplication(*), Division(/), Cosine(cos), Sine(sin), Tangent(tan)]\n> ");
 
-        for (String answer : answers) {
+        for (String answer : answers)
             if (s.equals(answer))
                 return answer;
-        }
-        throw new UnsupportedOperationException("Not a valid operation!");
+
+        throw new IllegalArgumentException("Not a valid operation!");
     }
+
+    public int get_angle_mode() {
+        String[] answers = { "rad", "deg" };
+
+        String s = this.get_string("Which angle mode? [deg, rad]\n> ");
+
+        for (int i = 0; i < answers.length; i++)
+            if (s.equalsIgnoreCase(answers[i]))
+                return i;
+
+        throw new IllegalArgumentException("Not a valid operation!");
+    }
+
 }
