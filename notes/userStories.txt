@@ -29,3 +29,7 @@ So that I can know the result
 As a user
 I want to save the last result
 So that I can use it in the next operation
+
+As a user
+I want to interact with the application via GUI
+So that the application is user friendly
