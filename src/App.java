@@ -24,17 +24,17 @@ public class App {
                     result = operationType.division(i.get_number(result), i.get_number(result));
                     break;
                 case "sin": // Sine
-                    result = operationType.sine(i.get_number(result), i.get_angle_mode());
+                    result = operationType.sine(i.get_angle_mode(), i.get_number(result));
                     break;
                 case "cos": // Cosine
-                    result = operationType.cosine(i.get_number(result), i.get_angle_mode());
+                    result = operationType.cosine(i.get_angle_mode(), i.get_number(result));
                     break;
                 case "tan": // Tangent
-                    result = operationType.tangent(i.get_number(result), i.get_angle_mode());
+                    result = operationType.tangent(i.get_angle_mode(), i.get_number(result));
                     break;
             }
 
-            System.out.print("The result is: " + Math.round(result) + "\n");
+            System.out.printf("The result is: %.3f\n", result);
         }
     }
 }

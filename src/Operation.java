@@ -57,7 +57,7 @@ public class Operation {
      * @param firstNumber first operand of operation
      * @return the result of operation
      */
-    public double sine(double firstNumber, int mod) {
+    public double sine(int mod, double firstNumber) {
         if (mod == 1) /* 1 = gradi */
             firstNumber = Math.toRadians(firstNumber);
         return Math.sin(firstNumber);
@@ -69,7 +69,7 @@ public class Operation {
      * @param firstNumber first operand of operation
      * @return the result of operation
      */
-    public double cosine(double firstNumber, int mod) {
+    public double cosine(int mod, double firstNumber) {
         if (mod == 1) /* 1 = gradi */
             firstNumber = Math.toRadians(firstNumber);
         return Math.cos(firstNumber);
@@ -81,7 +81,7 @@ public class Operation {
      * @param firstNumber first operand of operation
      * @return the result of operation
      */
-    public double tangent(double firstNumber, int mod) {
+    public double tangent(int mod, double firstNumber) {
         if (mod == 1) /* 1 = gradi */
             firstNumber = Math.toRadians(firstNumber);
         return Math.tan(firstNumber);
