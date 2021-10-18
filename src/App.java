@@ -7,22 +7,23 @@ public class App {
         Input i = new Input();
         String selectMenu = i.get_operation();
         Operation operationType = new Operation();
+        Double result = 0.0;
 
         switch (selectMenu) {
             case "+": // Addizione
-                operationType.sum(i.get_number(), i.get_number());
+                result = operationType.sum(i.get_number(), i.get_number());
                 break;
             case "-": // Sottrazione
-                operationType.substract(i.get_number(), i.get_number());
+                result = operationType.substract(i.get_number(), i.get_number());
                 break;
             case "*": // Moltiplicazione
-                operationType.moltiplicate(i.get_number(), i.get_number());
+                result = operationType.multiplication(i.get_number(), i.get_number());
                 break;
             case "/": // Divisione
-                operationType.moltiplicate(i.get_number(), i.get_number());
-
+                result = operationType.division(i.get_number(), i.get_number());
                 break;
         }
 
+        System.out.print("the result is: " + result + "\n");
     }
 }

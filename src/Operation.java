@@ -1,5 +1,7 @@
 public class Operation {
-
+    /**
+     * This function is the constructor of class
+     */
     public Operation() {
     }
 
@@ -32,7 +34,7 @@ public class Operation {
      * @param secondNumber second operand of operation
      * @return the result of operation
      */
-    public double moltiplicate(double firstNumber, double secondNumber) {
+    public double multiplication(double firstNumber, double secondNumber) {
         return firstNumber * secondNumber;
     }
 
